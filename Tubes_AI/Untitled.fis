@@ -1,0 +1,73 @@
+[System]
+Name='Untitled'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='pH'
+Range=[0 14]
+NumMFs=3
+MF1='asam':'trapmf',[0 0 6 7]
+MF2='normal':'trapmf',[6 7 8 9]
+MF3='Basa':'trapmf',[8 9 14 14]
+
+[Input2]
+Name='warna'
+Range=[0 100]
+NumMFs=3
+MF1='Jernih':'trapmf',[0 0 50 60]
+MF2='Sedang':'trimf',[50 60 70]
+MF3='keruh':'trapmf',[60 70 100 100]
+
+[Input3]
+Name='TDS'
+Range=[0 2500]
+NumMFs=3
+MF1='rendah':'trapmf',[0 0 1500 1750]
+MF2='sedang':'trimf',[1500 1750 2000]
+MF3='tinggi':'trapmf',[1750 2000 2500 2500]
+
+[Output1]
+Name='Kualitas_Air'
+Range=[0 60]
+NumMFs=3
+MF1='normal':'trapmf',[0 0 9 12]
+MF2='tercemar_ringan':'trapmf',[9.31746031746032 12.3174603174603 30.3174603174603 32.3174603174603]
+MF3='tercemar_berat':'trapmf',[30 50 60 60]
+
+[Rules]
+1 1 1, 2 (1) : 1
+2 1 1, 1 (1) : 1
+3 1 1, 1 (1) : 1
+1 1 2, 2 (1) : 1
+2 1 2, 1 (1) : 1
+3 1 2, 1 (1) : 1
+1 1 3, 2 (1) : 1
+2 1 3, 1 (1) : 1
+3 1 3, 1 (1) : 1
+1 2 1, 2 (1) : 1
+2 2 1, 1 (1) : 1
+3 2 1, 1 (1) : 1
+1 2 2, 2 (1) : 1
+2 2 2, 1 (1) : 1
+3 2 2, 1 (1) : 1
+1 2 3, 3 (1) : 1
+2 2 3, 2 (1) : 1
+3 2 3, 2 (1) : 1
+1 3 1, 3 (1) : 1
+2 3 1, 2 (1) : 1
+3 3 1, 2 (1) : 1
+1 3 2, 3 (1) : 1
+2 3 2, 2 (1) : 1
+3 3 2, 3 (1) : 1
+1 3 3, 3 (1) : 1
+2 3 3, 3 (1) : 1
+3 3 3, 3 (1) : 1

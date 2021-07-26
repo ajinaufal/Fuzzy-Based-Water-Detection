@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1586792783 source:c:\users\lixabet\desktop\tubes\tubes_ai\main.cpp
+	<stdio.h>
+	<iostream>
+
+1587701666 source:c:\users\lixabet\desktop\tubes\tubes_ai\tubes_ai\main.cpp
+	<stdio.h>
+	<iostream>
+
